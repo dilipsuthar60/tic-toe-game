@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const useTicToe = (boardNumber ) => {
+const useTicToe = (boardNumber = 3) => {
   const [turn, setTurn] = useState(true);
   const [board, setBoard] = useState(Array(boardNumber*boardNumber).fill(null));
   const [patterns, setPatterns] = useState([]);

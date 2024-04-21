@@ -1,9 +1,9 @@
-import React,{useState} from "react";
+import React from "react";
 import "../App.css";
 import useTicToe from "../hook/useTicToe";
 const TicToe = ({ boardNumber }) => {
   const {board, handleClick, getStatusMessage, handleReset } =
-    useTicToe(boardNumber);
+    useTicToe(boardNumber||3);
   return (
     <div style={{ width: `${100 * boardNumber}px` }}>
       <div className="status">
