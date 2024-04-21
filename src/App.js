@@ -1,23 +1,15 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import TicToe from './components/TicToe';
 
 function App() {
+  const [number,setNumber] = useState(3)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div>
+      <input style={{width:"200px",marginTop:20}} type='number' min={3} max={6} value={number} onChange={(e)=>setNumber(e.target.value)}/>
+      </div>
+      <TicToe boardNumber={number}/>
     </div>
   );
 }
